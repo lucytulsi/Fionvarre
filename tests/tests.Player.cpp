@@ -19,7 +19,7 @@ void PlayerTests::Player_can_look_at_current_location()
    assert(player.Look() == description);
 }
 
-void PlayerTests::RunPlayerTests()
+void PlayerTests::RunAll()
 {
    printf("Running Player Tests...\n");
    Player_can_look_at_current_location();

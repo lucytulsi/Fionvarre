@@ -3,7 +3,7 @@
 class PlayerTests
 {
 public:
-   static void RunPlayerTests();
+   static void RunAll();
 
 private:
    static void Player_can_look_at_current_location();
