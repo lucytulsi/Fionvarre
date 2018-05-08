@@ -1,0 +1,3 @@
+#!/bin/bash
+
+g++ ../tests/TestRunner.cpp ../tests/tests.Player.cpp ../Location.cpp ../Player.cpp -std=c++11 -stdlib=libc++
