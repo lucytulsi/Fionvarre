@@ -4,22 +4,27 @@
 #include "tests.Player.h"
 #include "../Location.h"
 #include "../Player.h"
+#include "../Map.h"
 
 using namespace ::std;
 
 void PlayerTests::Player_can_look_at_current_location()
 {
-   string description = "\nGolden sands under foot, rolling waves of the Atlantic.\n"
-      "Coast paths to the North and South, steep cliff steps to the East.\n";
+   string description = "Golden sands under foot, rolling waves of the Atlantic.";
 
-   Location beach(description);
+   Location beach(description,
+                  Map::BlockedDirection,
+                  Map::BlockedDirection,
+                  Map::BlockedDirection,
+                  Map::BlockedDirection);
+   Map map(1, beach);
 
-   Player player(beach);
+   Player player(beach, map);
 
    assert(player.Look() == description);
 }
 
-void PlayerTests::RunPlayerTests()
+void PlayerTests::RunAll()
 {
    printf("Running Player Tests...\n");
    Player_can_look_at_current_location();
